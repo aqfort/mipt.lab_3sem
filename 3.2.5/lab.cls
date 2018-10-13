@@ -1,9 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lab}
-\ProcessOptions\relax
+\ProcessOptions
 
-\LoadClass[a4paper, 12pt]{article}		% Добавить leqno в [] для нумерации слева
+% \LoadClass[12pt, a4paper, twoside, final]{article}
+\LoadClass[12pt, a4paper, final]{article}
+
 \RequirePackage{cmap}				% Поиск в PDF
+\RequirePackage[unicode]{hyperref}
 \RequirePackage{mathtext}			% Русские буквы в формулах
 \RequirePackage[T2A]{fontenc}			% Кодировка
 \RequirePackage[utf8]{inputenc}		% Кодировка исодного текста
@@ -17,7 +20,7 @@
 \RequirePackage{mathtools}
 \RequirePackage{cancel}
 \RequirePackage{mathrsfs}
-\RequirePackage{icomma}		% Умная запятая
+\RequirePackage{icomma}				% Умная запятая
 
 % Показывать номера только у тех формул, на которые есть \eqref{} в тексте
 \mathtoolsset{showonlyrefs=true}
@@ -35,7 +38,6 @@
 	bottom = 20 mm,
 	footskip = 10 mm,
 	includefoot] {geometry}
-\RequirePackage[unicode]{hyperref}
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0em}
 
@@ -58,17 +60,9 @@
 \RequirePackage{pgfplots, pgfplotstable}
 \pgfplotsset{compat=1.9}
 
-\RequirePackage{circuitikz}	% Electrical networks
+\RequirePackage{circuitikz}				% Electrical networks
 
-% Нумерация страниц
-% \RequirePackage{fancyref}
-% \RequirePackage{fancyhdr}
-% \pagestyle{fancy}
-% \fancyhf{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-% \fancyfoot[C]{\texttt{-~\thepage~-}}
+\RequirePackage[justification=centering]{caption}
+\newcommand{\ve}[1]{\boldsymbol{#1}}		% Жирный вектор
 
-\RequirePackage{mathtext}				% русские буквы в фомулах
-\RequirePackage[T2A]{fontenc}				% кодировка
-\RequirePackage[utf8]{inputenc}			% кодировка исходного текста
+\input{commands.cls}
