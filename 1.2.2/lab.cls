@@ -64,4 +64,20 @@
 
 \RequirePackage[justification=centering]{caption}
 
+% Pagestyle
+\RequirePackage{fancyhdr}
+\fancypagestyle{VR}
+{
+	\pagestyle{empty}
+	\pagestyle{fancy}					% Применим колонтитул
+	\lhead{{\small Ринат Валиев}}
+	\rhead{{\small 711 гр.}}
+	\cfoot{--~\arabic{page}~--}
+	\renewcommand{\headrulewidth}{0.1pt}	% Толщина отделяющей полоски сверху
+	\footskip = 50pt
+}
+
+\parindent=0.5cm				% Абзац
+\renewcommand{\arraystretch}{1.2}	% Таблицы красивее
+
 \input{commands.cls}
