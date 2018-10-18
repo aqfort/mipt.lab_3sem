@@ -70,10 +70,10 @@
 {
 	\pagestyle{empty}
 	\pagestyle{fancy}					% Применим колонтитул
-	\lhead{{\small Ринат Валиев}}
-	\rhead{{\small 711 гр.}}
+	% \lhead{{\small Ринат Валиев}}
+	% \rhead{{\small 711 гр.}}
 	\cfoot{--~\arabic{page}~--}
-	\renewcommand{\headrulewidth}{0.1pt}	% Толщина отделяющей полоски сверху
+	\renewcommand{\headrulewidth}{0pt}	% Толщина отделяющей полоски сверху
 	\footskip = 50pt
 }
 
